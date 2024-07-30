@@ -9,7 +9,7 @@ saveFeaturesPath='/Users/bzcschae/workspace/multidim_motifs/SMM_test/BENCHMARK/M
 subfolderPath= '';%'Z_A_Temp_C/';%
 FeaturesRM ='RMT';
 
-TS_num = 2
+TS_num = 14
 
 %% Action to perform
 FeatureExtractionFlag = 1; % 1 do it others  skip
