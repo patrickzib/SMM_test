@@ -2,19 +2,17 @@
 
 function[TIMEFOROCTAVE] = BirdSong_FE_start(PATH_dataset,saveFeaturesPath,TS_name, USER_OT_targhet, USER_OD_targhet)
 
-
     %% Parameters for  feature extractions
     DeOctTime = USER_OT_targhet;
     DeOctDepd = USER_OD_targhet;
-    DeLevelTime = 4;%6;%
-    DeLevelDepd = 4;%6;%
-    DeSigmaDepd = 0.5;%0.5;%0.4;%
-    DeSigmaTime = 4*sqrt(2)/2;%1.6149;%4*sqrt(2)/2;%3.2298;%4*sqrt(2);%1.6*2^(1/(DeLevelTime));%(1.6*2^(1/DeLevelTime))/2;%1.6*2^(1/(DeLevelTime));%4*sqrt(2)/2;%
-    %4*sqrt(2);%2.5*2^(1/DeLevelTime);%1.6*2^(1/DeLevelTime);%4*sqrt(2);%2*1.6*2^(1/DeLevelTime);%  8;%4*sqrt(2);%1.2*2^(1/DeLevelTime);%
-    thresh = 0.04 / (DeLevelTime) / 2 ;%0.04;%
-    DeGaussianThres = 6;% 0.1;%0.001;%0.7;%0.3;%1;%0.6;%2;%6; % TRESHOLD with the normalization of hte distance matrix should be  between 0 and 1
+    DeLevelTime = 4;
+    DeLevelDepd = 4;
+    DeSigmaDepd = 0.5;
+    DeSigmaTime = 4*sqrt(2)/2;    
+    thresh = 0.04 / DeLevelTime / 2;
+    DeGaussianThres = 6; % TRESHOLD with the normalization of hte distance matrix should be  between 0 and 1
     DeSpatialBins = 4; %NUMBER OF BINs
-    r= 10;
+    r = 10;
     R = 52;% number of variates original was 13 %13;%
 
     IDM1 = [1:R];% cluster for octave 1,1 [2,3,4,5,6,7,1,8,9,10,11,12,13];%

@@ -2,16 +2,15 @@
 
 function[TIMEFOROCTAVE] = Energy_FE_old_start(PATH_dataset,saveFeaturesPath,TS_name, USER_OT_targhet, USER_OD_targhet)
 
-
     %% Parameters for  feature extractions
     DeOctTime = USER_OT_targhet;
     DeOctDepd = USER_OD_targhet;
-    DeLevelTime = 4;%6;%
-    DeLevelDepd = 4;%6;%
-    DeSigmaDepd = 0.5;%0.6;%0.5;%0.3;%
-    DeSigmaTime = 4*sqrt(2)/2;%1.6*2^(1/DeLevelTime);%*2;%4*sqrt(2);%1.6*2^(1/DeLevelTime);%4*sqrt(2);%2*1.6*2^(1/DeLevelTime);%  8;%4*sqrt(2);%1.2*2^(1/DeLevelTime);%
-    thresh = 0.04 / DeLevelTime / 2 ;%0.04;%
-    DeGaussianThres = 0.1;%0.1;%0.4;%1;%0.6;%2;%6; % TRESHOLD with the normalization of hte distance matrix should be  between 0 and 1
+    DeLevelTime = 4;
+    DeLevelDepd = 4;
+    DeSigmaDepd = 0.5;
+    DeSigmaTime = 4*sqrt(2)/2;
+    thresh = 0.04 / DeLevelTime / 2 ;
+    DeGaussianThres = 0.1;
     DeSpatialBins = 4; %NUMBER OF BINs
     r= 10; %5 threshould variates
 
